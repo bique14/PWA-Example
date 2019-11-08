@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" sizes="192x192" href="frog.png">
+  <link rel="shortcut icon" href="frog.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>PWA Test Mobile</title>
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <span style="display: block;">Hello world</span>
+    <button id="inc" onClick="increase()">+</button>
+    <span id="count">0</span>
+    <button id="dec" onClick="deacrease()">-</button>
+  </div>
+</body>
+<script>
+  const count = document.getElementById('count')
+  const inc = document.getElementById('inc')
+  const dec = document.getElementById('dec')
+
+  let i = 0
+  function increase() {
+    i = i + 1
+    count.innerHTML = i
+  }
+
+  function deacrease() {
+    i = i - 1
+    if (i <= 0) {
+      i = 0
+    }
+    count.innerHTML = i
+  }
+</script>
+
+</html>
